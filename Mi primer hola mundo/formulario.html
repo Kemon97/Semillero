@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><h1>FORMULARIO</h1></title>
+    <script>
+        let  num1;
+        let  num2;
+        function leerNumero (mensaje, numDefect){
+            let numero;
+            do {
+                numero = parseInt(prompt(mensaje, numDefect));
+            } while (isNaN(numero));
+
+            return numero;
+        }
+        function sumar(num1, num2) {
+            return num1 + num2;
+        }
+        function continuar(mensaje = "¿Desea continuar?") {
+            return confirm(mensaje);
+        }
+        function colocarValor(boton) {
+            boton.disabled = true
+            boton.value = prompt("Ingrese X o O")
+        }
+    </script>
 </head>
 <body>
+    <table>
+        <tr>
+            <td>
+                <th><button type="button" id="11" onclick="colocarValor(this.innerHTML = date())"></button></th>
+                <th><button type="button" id="11">x</button></th>
+                <th><button type="button" id="11">x</button></th>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <th><button type="button" id="11">x</button></th>
+                <th><button type="button" id="11">x</button></th>
+                <th><button type="button" id="11">x</button></th>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <th><button type="button" id="11">x</button></th>
+                <th><button type="button" id="11">x</button></th>
+                <th><button type="button" id="11">x</button></th>
+            </td>
+        </tr>
+    </table>
     <marquee behavior="" direction="left">EL MEJOR SEMILLERO HTML</marquee>
     <form >
         <fieldset>
