@@ -24,15 +24,25 @@
         }
         function colocarValor(boton) {
             boton.disabled = true
-            boton.value = prompt("Ingrese X o O")
+            let cadena = window.prompt("Ingrese X o O").trim();
+
+            document.getElementById("primernombre").value = cadena.trim().padStart(10, "-");
+            document.getElementById("segundonombre").value = cadena.trimEnd();
+            document.getElementById("primerapellido").value = cadena.trimLeft();
+            document.getElementById("segundoapellido").value = cadena.trimStart();
+
+            boton.textContent = cadena.trim();
+            
         }
+
+        function 
     </script>
 </head>
 <body>
     <table>
         <tr>
             <td>
-                <th><button type="button" id="11" onclick="colocarValor(this.innerHTML = date())"></button></th>
+                <th><button type="button" id="11" onclick="colocarValor(this.innerHTML = date())">x</button></th>
                 <th><button type="button" id="11">x</button></th>
                 <th><button type="button" id="11">x</button></th>
             </td>
